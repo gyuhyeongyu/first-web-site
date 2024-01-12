@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS</title>
+        <style>
+            p.indent{ padding-left: 1.8em }
+            a{
+                color:black;
+                text-decoration:none;
+            }
+            h1{
+                font-size: 60px;
+                text-align: center;
+                border-bottom:1px solid gray;
+                margin:0;
+                padding:20px;
+            }
+            ol.index{
+                border-right:1px solid gray;
+                width:100px;
+                margin:0;
+                padding:20px;
+            }
+            body{
+                margin:0;
+                border-bottom:1px solid gray;
+            }
+            #grid{
+                display:grid;
+                grid-template-columns: 150px 1fr;
+            }
+            #grid ol{
+                padding-left:33px;
+            }
+            #grid #article{
+                padding-left:25px;
+            }
+            @media(max-width: 800px){
+                #grid{
+                display:block;
+                }
+                ol{
+                border-right:none;
+                }
+                h1{
+                border-bottom:1px solid gray;
+                }
+                #article{
+                border-top:1px solid gray;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1><a class="title" href ="index.html">Title</a></h1>
+        <div id="grid">
+            <ol class="index">
+                <li><a href ="Diablo 3.html"> Diablo 3</a></li>
+                <li><a href ="Path of exile.html"> Path of exile</a></li>
+                <li><a href ="HTML.html"> HTML</a></li>
+                <li><a href ="css.html">CSS</a></li>
+            </ol>
+            <div id="article">
+                <h2>CSS 문법 정리</h2>
+                <h3>0. CSS 문법 사용하는 법</h3>
+                    html의 head 태그 안에 &lt;style&gt;과 &lt;/style&gt;를 적은 뒤, 적용하고 싶은 태그를 적은 뒤, 중괄호 안에 적용하고 싶은 문법 작성. 이 때, 따로 태그가 없으면
+                    &lt;div&gt;를 사용하면 됨. div 태그는 아무 기능도 없는 태그
+                <h3>1. 글자를 꾸미는 문법</h3>
+                    <ol>
+                        <li>color : "바꾸고 싶은 색"; - 글자의 색을 바꿈.</li>
+                        <li>text-decoration:none; - 글자에 적용되어 있는 효과 삭제 ex&#41; h1과 같은 태그를 사용할 때 붙는 밑줄 제거 가능.</li>
+                        <li>text-align: center, left, right, justify; - 글자를 중앙, 왼쪽, 오른쪽, 정렬해주는 기능</li>
+                    </ol>
+                <h3>2. 박스 모델</h3>
+                    <ol>
+                        <li>html에 적용되는 글자는 태그마다 고유의 속성을 가지고 있음. 이를 통해 box를 만들 수 있음. 바깥 쪽 부터 margin, border, padding이며, 이를 조절하며 시인성 좋게 만들기 가능</li>
+                        <li>border-top,bottom,left,right:아무 숫자px solid 색상; - 박스의 선을 상, 하, 좌, 우에 나타내며 두께는 px로 나타내고 색상도 설정 가능</li>
+                    </ol>
+                <h3>3. 그리드 설정</h3>
+                    <ol>
+                        <li>html에서 표를 만들고 싶으면 grid를 설정하면 된다. 이때 적용하는 방법은 disply:grid;라는 문법을 사용하면 된다.</li>
+                        <li>grid-template-columns: - 열을 생성하는 grid</li>
+                    </ol>
+                    <h3>4. 미디어 쿼리</h3>
+                    <ol>
+                        <li>화면의 size에 따라 어떻게 보일지 설정할 수 있는 문법이다.</li>
+                        <li>@media&#40;적용하고 싶은 size&#41;이후 중괄호 안에 style과 동일하게 적으면 됨.</li>
+                    </ol>
+               
+            </div>
+        </div>
+    </body>
+</html>

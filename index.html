@@ -3,17 +3,68 @@
 <head>
     <title>Title</title>
     <meta charset="utf-8">
+    <style>
+        a{
+            color:black;
+            text-decoration:none;
+        }
+        h1{
+            font-size: 60px;
+            text-align: center;
+            border-bottom:1px solid gray;
+            margin:0;
+            padding:20px;
+        }
+        ol.index{
+            border-right:1px solid gray;
+            width:100px;
+            margin:0;
+            padding:20px;
+        }
+        body{
+            margin:0;
+        }
+        #grid{
+            display:grid;
+            grid-template-columns: 150px 1fr;
+            border-bottom:1px solid gray;
+        }
+        #grid ol{
+            padding-left:33px;
+        }
+        #grid #article{
+            padding-left:25px;
+        }
+        @media(max-width: 800px){
+           #grid{
+                display:block;
+                }
+                ol{
+                border-right:none;
+                }
+                h1{
+                border-bottom:1px solid gray;
+                }
+                #article{
+                border-top:1px solid gray;
+                }
+        }
+    </style>
 </head>
 
 <body>
-    <h1><a href ="index.html"> Title</a></h1>
-<ol>
-    <li><a href ="Diablo 3.html"> Diablo 3</a></li>
-    <li><a href ="Path of exile.html"> Path of exile</a></li>
-    <li><a href ="HTML.html"> HTML</a></li>
-</ol>
-
-<h2>test web</h2>
-Hello
+    <h1><a href="index.html">Title</a></h1>
+<div id="grid">
+    <ol class="index">
+        <li><a href="Diablo 3.html">Diablo 3</a></li>
+        <li><a href="Path of exile.html">Path of exile</a></li>
+        <li><a href="HTML.html">HTML</a></li>
+        <li><a href ="css.html">CSS</a></li>
+    </ol>
+    <div id="article">
+        <h2>test web</h2>
+        Hello
+    </div>
+</div>
 </body>
 </html>
